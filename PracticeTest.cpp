@@ -21,10 +21,10 @@ TEST(PracticeTest, is_simple_palindrome)
     ASSERT_TRUE(actual);
 }
 
-TEST(PracticeTest, is_simple_palindrome)
+TEST(PracticeTest, is_not_palindrome)
 {
     Practice obj;
 	//Testing a false assertion
     bool actual = obj.isPalindrome("baa");
-    ASSERT_TRUE(actual);
+    ASSERT_FALSE(actual);
 }
