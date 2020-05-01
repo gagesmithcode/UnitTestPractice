@@ -28,3 +28,13 @@ TEST(PracticeTest, is_not_palindrome)
     bool actual = obj.isPalindrome("baa");
     ASSERT_FALSE(actual);
 }
+
+TEST(PracticeTest, check_simple_sort)
+{
+	Practice obj;
+	int first = 1, second = 2, third = 3;
+	obj.sortDescending(first, second, third);
+
+	ASSERT_TRUE(first > second);
+	ASSERT_TRUE(second < third);
+}
