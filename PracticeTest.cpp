@@ -84,9 +84,9 @@ TEST(PracticeTest, check_first_less_than_third)
 TEST(PracticeTest, check_same_list)
 {
 	Practice obj;
-	int first = 8;
+	int first = 7;
 	int second = 8;
-	int third = 8;
+	int third = 9;
 
 	obj.sortDescending(first, second, third);
 	bool flag;
