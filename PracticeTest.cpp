@@ -80,3 +80,20 @@ TEST(PracticeTest, check_first_less_than_third)
 	// are not in descending order
 	ASSERT_FALSE(flag);
 }
+
+TEST(PracticeTest, check_same_list)
+{
+	Practice obj;
+	int first = 8;
+	int second = 8;
+	int third = 8;
+
+	obj.sortDescending(first, second, third);
+	bool flag;
+	if(first == second && second == third)
+		flag = true;
+	else
+		flag = false;
+
+	ASSERT_TRUE(flag);
+}
