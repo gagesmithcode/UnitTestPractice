@@ -60,5 +60,21 @@ TEST(PracticeTest, check_random_list)
 		flag = false;
 
 	ASSERT_TRUE(flag);
+}
 
+TEST(PracticeTest, check_first_less_than_third)
+{
+	Practice obj;
+	int first = rand() % 10;
+	int second = rand() % 10;
+	int third = 90;
+
+	obj.sortDescending(first, second, third);
+	bool flag;
+	if(first > second && second > third)
+		flag = true;
+	else
+		flag = false;
+
+	ASSERT_TRUE(flag);
 }
