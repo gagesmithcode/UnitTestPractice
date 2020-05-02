@@ -40,60 +40,57 @@ TEST(PracticeTest, check_ascending_list)
 		flag = true;
 	else
 		flag = false;
-	//Should check for ASSERT_TRUE to confirm it works for ascending but it is a bug and
-	//ascending list is a end case sort descending doesn't handle
-	ASSERT_FALSE(flag);
+	ASSERT_TRUE(flag);
 }
 
 TEST(PracticeTest, check_random_list)
 {
 	Practice obj;
-	int first = rand()%999;
-	int second = rand()%999;
-	int third = rand()%999;
+	int first = rand()%999, second = rand()%999, third = rand()%999;
 
 	obj.sortDescending(first, second, third);
-	bool flag;
 	if(first > second && second > third)
-		flag = true;
+		ASSERT_TRUE(true);
 	else
-		flag = false;
-
-	ASSERT_TRUE(flag);
-}
-
-TEST(PracticeTest, check_first_less_than_third)
-{
-	Practice obj;
-	int first = 10;
-	int second = 10;
-	int third = 90;
-
-	obj.sortDescending(first, second, third);
-	bool flag;
-	if(first > second && second > third)
-		flag = true;
-	else
-		flag = false;
-	// Should be ASSERT_TRUE but there is an issue because of the testing order in sortDesc
-	// Forcing a situation where the third if statement carries will most likely mean that they
-	// are not in descending order
-	ASSERT_FALSE(flag);
+		ASSERT_TRUE(false);
 }
 
 TEST(PracticeTest, check_same_list)
 {
 	Practice obj;
-	int first = 7;
-	int second = 8;
-	int third = 9;
+	int first = 0;
+	int second = 0;
+	int third = 0;
 
 	obj.sortDescending(first, second, third);
-	bool flag;
 	if(first == second && second == third)
-		flag = true;
+		ASSERT_TRUE(true);
 	else
-		flag = false;
+		ASSERT_TRUE(false);
 
-	ASSERT_TRUE(flag);
+}
+
+TEST(PracticeTest, check_second_third_swap)
+{
+	Practice obj;
+	int first = 10, second = 3, third = 6;
+
+	obj.sortDescending(first, second, third);
+	if(first > second && second > third)
+		ASSERT_TRUE(true);
+	else
+		ASSERT_TRUE(false);
+}
+
+TEST(PracticeTest, check_already_sorted)
+{
+	Practice obj;
+	int first = 10, second = 7, third = 6;
+
+	obj.sortDescending(first, second, third);
+	if(first > second && second > third)
+		ASSERT_TRUE(true);
+	else
+		ASSERT_TRUE(false);
+
 }
