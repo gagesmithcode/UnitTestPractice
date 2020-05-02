@@ -66,7 +66,7 @@ TEST(PracticeTest, check_first_less_than_third)
 {
 	Practice obj;
 	int first = 10;
-	int second = 6;
+	int second = 10;
 	int third = 90;
 
 	obj.sortDescending(first, second, third);
