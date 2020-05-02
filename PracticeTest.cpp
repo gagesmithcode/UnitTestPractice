@@ -33,7 +33,7 @@ TEST(PracticeTest, check_simple_sort)
 {
 	Practice obj;
 	int first = 1, second = 2, third = 3;
-	obj.sortDescending(first, second, third);
+	obj.sortDescending(&first, &second, &third);
 	bool flag;
 	if(first > second)
 		flag = true;
@@ -41,5 +41,4 @@ TEST(PracticeTest, check_simple_sort)
 		flag = false;
 
 	ASSERT_TRUE(flag);
-	// ASSERT_TRUE(second < third);
 }
