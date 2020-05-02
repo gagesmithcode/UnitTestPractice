@@ -34,7 +34,12 @@ TEST(PracticeTest, check_simple_sort)
 	Practice obj;
 	int first = 1, second = 2, third = 3;
 	obj.sortDescending(first, second, third);
+	bool flag;
+	if(first > second)
+		flag = true;
+	else
+		flag = false;
 
-	ASSERT_TRUE(first > second);
+	ASSERT_TRUE(flag);
 	// ASSERT_TRUE(second < third);
 }
